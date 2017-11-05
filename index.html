@@ -13,9 +13,14 @@
       width: 100%;
     }
     body {
-      background: url("https://camo.githubusercontent.com/b281af2e6943ff9afff0d153b835df8bb6dbfadd/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f662e636c2e6c792f6974656d732f316d327233593241324a32533271324e303430762f496d616765253230323031352d31312d32312532306174253230362e35392e3534253230504d2e706e67") no-repeat;
+      background: url("animals/farm.svg") no-repeat;
       background-size: cover;
+      display: flex;
     }
+
+    #animal-container {
+    }
+
     .animal {
       height: 100px;
       width: 100px;
@@ -29,8 +34,10 @@
   <!-- js -->
 </head>
 <body>
-
+<div id="animal-container"></div>
   <div class="container-fluid farm"></div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
   <script src="app.js"></script>
 </body>
 </html>

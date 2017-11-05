@@ -1,7 +1,7 @@
 function FarmAnimal(name, sound, img) {
 	this.name = name;
 	this.sound = sound;
-	this.img = 'images/' + name + '.png';
+	this.img = 'animals/' + name + '.png';
 	this.talk = "the " + name + "says " + sound;
 }
 
@@ -22,7 +22,16 @@ var horse = new FarmAnimal('horse', 'neigh');
 var pig = new LiveStock('pig', 'oink oink');
 var turkey = new Bird('turkey', 'gobble gobble');
 
-console.log(goose)
+console.log(goose.img)
+
+var gooseImage = "<img src='" + goose.img + "' class= animal >";
+var cowImage = "<img src='" + cow.img + "' class= animal >";
+var horseImage = "<img src='" + horse.img + "' class= animal >";
+var pigImage = "<img src='" + pig.img + "' class= animal >";
+var turkeyImage = "<img src='" + turkey.img + "' class= animal >";
+
+
+$('animal-container').append(gooseImage)
 
 
 
