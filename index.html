@@ -18,13 +18,16 @@
       display: flex;
     }
 
-    #animal-container {
+    #livestock-container {
+      display: flex;
+      justify-content: flex-end;
+
     }
 
     .animal {
       height: 100px;
       width: 100px;
-      position: absolute;
+      /*position: absolute;*/
       bottom: 100px;
       cursor: pointer;
       background-size: cover;
@@ -34,7 +37,11 @@
   <!-- js -->
 </head>
 <body>
-<div id="animal-container"></div>
+
+  <div id="livestock-container"></div>
+  <div id="bird-container"></div>
+  <div id="horse-container"></div>
+
   <div class="container-fluid farm"></div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
