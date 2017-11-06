@@ -61,10 +61,9 @@ $('.animal').click(function(){
 			alert(turkey.sound);
 			console.log(turkey.talk);
 			break;
-
 	}
-	// alert(horse.sound);
-	// console.log(horse.talk);
+
+
 });
 
 
