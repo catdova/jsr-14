@@ -1,18 +1,18 @@
-function FarmAnimal(name, sound, img) {
+function FarmAnimal(name, sound) {
 	this.name = name;
 	this.sound = sound;
 	this.img = 'animals/' + name + '.png';
 	this.talk = "the " + name + " says " + sound;
 }
 
-function LiveStock(name, sound, img){
-	FarmAnimal.call(this, name, sound, img);
-	this.function = ['meat','milk','leather'];
+function LiveStock(name, sound){
+	FarmAnimal.call(this, name, sound);
+	this.purpose = ['meat','milk','leather'];
 
 }
 
-function Bird(name, sound, img) {
-	FarmAnimal.call(this, name, sound, img);
+function Bird(name, sound) {
+	FarmAnimal.call(this, name, sound);
 	this.eggs = true;
 }
 
@@ -22,6 +22,8 @@ var cow = new LiveStock('cow', 'moo');
 var horse = new FarmAnimal('horse', 'neigh');
 var pig = new LiveStock('pig', 'oink oink');
 var turkey = new Bird('turkey', 'gobble gobble');
+
+
 
 //create images from objects//
 var gooseImage = "<img src='" + goose.img + "' class='animal' id='gooseImage'>";
@@ -36,15 +38,33 @@ $('#bird-container').append(gooseImage, turkeyImage);
 $('#horse-container').append(horseImage);
 
 
-//Aniaml sounds//
-$('#gooseImage').click(function(){
-	alert(goose.sound)
-	console.log(goose.talk);
-});
+//Animal sounds//
+$('.animal').click(function(){
+	switch(this.id){
+		case "gooseImage":
+			alert(goose.sound);
+			console.log(goose.talk);
+			break;
+		case "horseImage":
+			alert(horse.sound);
+			console.log(horse.talk);
+			break;
+		case "cowImage":
+			alert(cow.sound);
+			console.log(cow.talk);
+			break;
+		case "pigImage":
+			alert(pig.sound);
+			console.log(pig.talk);
+			break;
+		case "turkeyImage":
+			alert(turkey.sound);
+			console.log(turkey.talk);
+			break;
 
-$('#horseImage').click(function(){
-	alert(horse.sound)
-	console.log(horse.talk);
+	}
+	// alert(horse.sound);
+	// console.log(horse.talk);
 });
 
 
